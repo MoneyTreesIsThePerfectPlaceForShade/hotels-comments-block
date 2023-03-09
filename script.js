@@ -1,9 +1,13 @@
 // достаю нужные элементы
-const body = document.body;
+const wrapper = document.querySelector(".wrapper");
 const nickname = document.querySelector(".inputNickname");
 const comment = document.querySelector(".comment");
 const time = document.querySelector(".inputTime");
 const btn = document.querySelector(".btn");
+
+const form = document.querySelector(".test");
+
+const commentsArray = [];
 // рендерит комментарий
 const renderComment = function (name, text, time) {
   const now = new Date();
@@ -30,11 +34,11 @@ const renderComment = function (name, text, time) {
   <h1>${name}</h1>
   <p>${text}</p>
   <p>${time}</p>
-  <button class='like'><i class="fa fa-heart heart"></i></button>
-  <button class="delete"><i class="fa fa-trash-o trash"></i></button>
+  <button class="like">LIKE</button>
+  <button class="delete">DELETE</i></button>
   </div>
   `;
-  body.insertAdjacentHTML("beforeend", hmtl);
+  wrapper.insertAdjacentHTML("beforeend", hmtl);
 };
 
 // кнопка, запускающая рендер комментария
@@ -47,12 +51,3 @@ btn.addEventListener("click", function (e) {
 
   renderComment(name, text, commentTime);
 });
-
-const btnLike = document.querySelector(".like");
-const heart = document.querySelector(".heart");
-// btnLike.addEventListener("click", function (e) {
-//   e.preventDefault();
-//   heart.classList.toggle("heart-active");
-// });
-
-/*https://www.youtube.com/watch?v=W_5wlQ2FUVI&ab_channel=JavaScriptFront */

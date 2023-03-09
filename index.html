@@ -19,34 +19,36 @@
   </head>
   <body>
     <!-- Форма комментариев -->
-    <form>
-      <div class="division">
-        <label for="nickname" class="label">Введите свой никнейм: </label>
+    <div class="wrapper">
+      <form>
+        <div class="division">
+          <label for="nickname" class="label">Введите свой никнейм: </label>
+          <input
+            name="nickname"
+            type="text"
+            class="input inputNickname"
+            placeholder="Никнейм"
+          />
+        </div>
+
+        <label for="commentBody" class="label labelComment"
+          >Введите комментарий:
+        </label>
         <input
-          name="nickname"
+          name="commentBody"
           type="text"
-          class="input inputNickname"
-          placeholder="Никнейм"
+          class="input comment"
+          placeholder="Комментарий"
         />
-      </div>
 
-      <label for="commentBody" class="label labelComment"
-        >Введите комментарий:
-      </label>
-      <input
-        name="commentBody"
-        type="text"
-        class="input comment"
-        placeholder="Комментарий"
-      />
+        <div class="division divisionTime">
+          <label for="time" class="label">Время комментария: </label>
+          <input name="time" type="date" class="input inputTime" />
+        </div>
 
-      <div class="division divisionTime">
-        <label for="time" class="label">Время комментария: </label>
-        <input name="time" type="date" class="input inputTime" />
-      </div>
-
-      <button type="submit" class="btn">Опубликовать</button>
-    </form>
+        <button type="submit" class="btn">Опубликовать</button>
+      </form>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
