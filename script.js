@@ -56,6 +56,17 @@ btn.addEventListener("click", function (e) {
   const text = comment.value;
   const commentTime = time.value;
 
+  // простейшая валидация, пока не стал запариваться, в реальной задачи использовал бы API или библиотеку, а пока следую KISS
+  // также можно было бы не alert использовать, а сделать нормальное сообщение под текстом или с модальным окном, если останется время - сделаю красиво, а пока так, MVP так сказать
+  if (name === "") {
+    alert("Введите имя");
+    return;
+  }
+  if (text === "") {
+    alert("Введите комментарий");
+    return;
+  }
+
   renderComment(name, text, commentTime);
 });
 
