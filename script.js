@@ -32,9 +32,9 @@ const renderComment = function (name, text, time) {
   const hmtl = `
   <div class="commentRendered">
   <h1>${name}</h1>
-  <p>${text}</p>
+  <p class="text">${text}</p>
   <p>${time}</p>
-  <button class="like">LIKE</button>
+  <button class="like" onclick="like(this)">LIKE</button>
   <button class="delete">DELETE</i></button>
   </div>
   `;
@@ -51,3 +51,13 @@ btn.addEventListener("click", function (e) {
 
   renderComment(name, text, commentTime);
 });
+
+function like(_this) {
+  const parent = _this.parentNode;
+  const texts = parent.getElementsByClassName("text");
+  if(texts.length) {
+    alert("Your comment is '" + texts[0].textContent + "'");
+    return;
+  }
+  alert("Nothing was found.");
+}
