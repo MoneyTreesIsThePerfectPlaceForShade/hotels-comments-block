@@ -77,21 +77,49 @@ form {
 }
 
 .heart {
-  font-size: 2.5rem;
+  width: 3rem;
+  /* font-size: 2.5rem; */
   color: black;
 }
 
-.heart-active {
+.liked {
   color: #c00411;
 }
 
-.like,
-.delete {
+/*  */
+.likeBtn,
+.deleteBtn {
   cursor: pointer;
-  margin-right: 1rem;
+  /* margin-right: 1rem; */
   padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 100rem;
+  background-color: white;
 }
 
-.commentRendered p {
-  margin: 0.5rem;
+.commentRendered {
+  margin-left: 15%;
+  max-width: 70%;
+  border-radius: 1rem;
+  border: 0.5rem solid #4682b4;
+
+  margin-top: 2rem;
+}
+
+.commentRendered h1 {
+  margin: 1rem 1rem;
+  font-weight: 400;
+  font-size: 2.5rem;
+}
+
+.text {
+  font-size: 1.5rem;
+  margin: 0 2rem;
+  word-wrap: break-word;
+}
+
+.time {
+  font-size: 1.5rem;
+  margin: 1rem 2rem;
+  text-align: right;
 }
